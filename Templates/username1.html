@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction</title>
+</head>
+<style>
+.div8
+{
+    background-color:#F8F8FF; 
+    border-style: solid;
+    margin-left: 300px;
+    margin-right: 300px;
+   }
+.div9
+{
+    background-color:#F8F8FF;
+} 
+
+a:link, a:visited {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:link:active, a:visited:active {
+    color: gray;
+}
+</style>
+<body>
+<div class="div9">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="div8">
+<center>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+  <h2 style="color:gray;" >Your Username is:{{user.name}}</h2>
+
+<h2 style="color:#9ACD32"> Use this Username during Login </h2>
+<br>
+
+
+<a href="login">Login</a>
+<br><br>
+</div>
+<br> <br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+</body>
+<script>
+
+</script>
+
+</html>

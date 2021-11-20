@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<script>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+body {margin:0;}
+.div1 {
+       margin-left:300px;
+}
+/*.navbar {
+  overflow: hidden;
+  background-color: #2db300;
+  position: relative;
+  top: 100;
+  width: 100%;
+}*/
+
+.wrapper {
+ /* padding-top: 5px;*/
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+.menu {
+  background: #b3cccc;
+
+}
+.menu ul {
+  margin-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.menu ul li {
+  display: inline-block;
+}
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  padding-right:25px;
+  padding-left:25px;
+}
+.menu ul li a:hover {
+  background: #ff751a;
+  color: #FFF;
+}
+
+input {
+
+    /*width: 100%;*/
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Style the container for inputs */
+.container {
+    width: 65%;
+    background-color: #f1f1ff;
+    padding: 15px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+.error{
+	font-family:Arial;
+	size:10px;
+}
+.div8
+{
+    background-color:#F8F8FF; 
+}
+
+select#soflow, select#soflow-color {
+   -webkit-appearance: button;
+   -webkit-border-radius: 5px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 100% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: 5px;
+   margin-right:5px;
+   overflow: hidden;
+   padding: 10px ;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 96%;
+}
+
+select#soflow1, select#soflow1-color {
+   -webkit-appearance: button;
+   -webkit-border-radius: 5px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 100% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: 5px;
+   margin-right:5px;
+   overflow: hidden;
+   padding: 10px ;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 96%;
+}
+.menu1 {
+  background:#808080;
+
+}
+
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+        color:white; 
+        
+        
+     }
+
+</style>
+</head>
+
+<title>
+add Delivery
+</title>
+<body>
+
+<div >
+<img class="abc" src="{{url_for('static',filename='logo.png')}}" width=150 height=150>
+
+<a href="/"><h3 class="login1">Logout</h3></a>
+</div>
+<br>
+<div class="menu1">
+<i><strong><font size="10" color="white"><center>Add Delivery Boy Profile</center></font><strong></i>
+</div>
+<div class="div8">
+<br>
+<div class="div1">
+<div class="container">
+<form name="myForm"
+onsubmit="return validateForm()" method="post" autocomplete="off">
+<fieldset>
+<input style="width: 600px" type="text" name="id" placeholder="ID" required>
+<br>
+
+<input style="width: 600px" type="text" name="fname" placeholder="Name" required>
+<br>
+<input style="width: 600px"  type="text" name="area1" placeholder="Area 1" required>
+<br>
+  <input style="width: 600px"  type="text" name="area2" placeholder="Area 2" required>
+
+  <br>
+  <input style="width: 600px"  type="text" name="area3" placeholder="Area 3" required>
+
+  <br>
+  <input style="width: 600px"  type="text" name="area4" placeholder="Area 4" required>
+
+  <input style="width: 600px" type="text" name="phone" placeholder="Mobile number"required>
+<br>
+<br>
+
+
+
+<input style="width: 600px" type="submit" value="Submit">
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    var y = document.forms["myForm"]["phone"].value;
+    if (y.length!=10) {
+        alert("Mobile No must be of 10 digit");
+        return false;
+    }
+    alert("Delievery Boy added Succesfully");
+}
+
+</script>
+
+
+
+</div>
+</body>
+</html>
+

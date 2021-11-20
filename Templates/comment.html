@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizng: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 20%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {margin:0;}
+
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+
+td, th {
+   /* border: 1px solid #dddddd;*/
+    text-align: left;
+    padding: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom:10px;
+
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+abc {
+position: fixed;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.menu1 {
+  background:#808080;
+
+}
+.div8
+{
+    background-color:#F8F8FF;
+}
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+        color:white;
+
+
+     }
+.tejas{
+    height: 50px;
+
+}
+</style>
+</head>
+<body>
+<form method="POST">
+<div >
+<img class="abc" src="{{url_for('static',filename='logo.png')}}" width=150 height=150>
+<a href="/admin_dash"><h3 class="login1">Back</h3></a>
+</div>
+<br>
+
+<div class="menu1">
+<i><strong><font size="10" color="white"><center>Comments</center></font></strong></i>
+</div>
+<div class="div8">
+<br>
+
+    <ul type="disc">
+        {% for a in user.comment%}
+
+        <li class="tejas"><b>{{a}}</b></li>
+
+          {% endfor %}
+</ul>
+
+
+
+<br>
+</div>
+</form>
+</body>
+</html>
+

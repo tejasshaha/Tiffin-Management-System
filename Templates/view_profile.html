@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+ /* padding-top: 5px;*/
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+.menu {
+  background:#808080;
+
+}
+.menu ul {
+  margin-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.menu ul li {
+  display: inline-block;
+}
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  padding-right:25px;
+  padding-left:25px;
+}
+.menu ul li a:hover {
+  background: #9ACD32;
+  color: white;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #009900;
+  top: 100;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black
+;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background:#ff751a;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+
+td, th {
+   /* border: 1px solid #dddddd;*/
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+}
+
+abc {
+position: fixed;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.pqr{
+   margin-left:470px;
+    background-color:#F8F8FF;
+   }
+   .div8
+{
+       margin-left:470px;
+    background-color:#F8F8FF;
+}
+
+   .xyz{
+     margin-top:395px;
+     margin-left:250px;
+       }
+   .login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+        color:white;
+   }
+.menu1 {
+  background:#808080;
+
+}
+</style>
+</head>
+<script>
+function goBack() {
+    window.history.back()
+}
+</script>
+<body>
+
+
+<div >
+<img src="{{url_for('static',filename='logo.png')}}"  hspace="10" vspace="10" width=150 height=150>
+<!--<h1 style="margin-top:0px; text-align:center">Pune tiffins</h1>-->
+<h3 class="login1"><button onclick="goBack()">Back</button></h3></div>
+
+<br><!--
+<div class="navbar">
+  <a href="#home"><bold>Home</bold></a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>-->
+<br>
+<br>
+<div class="menu1">
+
+<i><strong><font size="15" color="white" ><center>Profile</center></font><strong></i>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+  <div class="div8">
+  <div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <table>
+  <tr >
+    <th><h2>First Name</h2></th>
+    <th><h2>{{user.name}}</h2></th>
+  </tr>
+
+  <tr >
+    <th><h2>Email</h2></th>
+    <th><h2>{{user.email}}</h2></th>
+  </tr>
+
+  <tr >
+    <th><h2>Phone</h2></th>
+    <th><h2>{{user.phone}}</h2></th>
+  </tr>
+
+  <tr >
+    <th><h2>Area</h2></th>
+    <th><h2>{{user.area}}</h2></th>
+  </tr>
+
+  <tr >
+    <th><h2>Address</h2></th>
+    <th><h2>{{user.address}}</h2></th>
+  </tr>
+
+    </table>
+</div>
+  
+
+<br>
+<br>
+<div class="xyz">
+ </div>
+</body>
+</html>
+

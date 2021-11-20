@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+
+/*.navbar {
+  overflow: hidden;
+  background-color: #2db300;
+  position: relative;
+  top: 100;
+  width: 100%;
+}*/
+
+.wrapper {
+ /* padding-top: 5px;*/
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+.menu {
+  background:#808080;
+
+}
+.menu ul {
+  margin-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.menu ul li {
+  display: inline-block;
+}
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  padding-right:25px;
+  padding-left:25px;
+}
+.menu ul li a:hover {
+  background: #9ACD32;
+  color: white;
+}
+
+input {
+
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Style the container for inputs */
+.container {
+    width: 50%;
+    background-color:#F8F8FF;
+    padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+.error{
+	font-family:Arial;
+	size:10px;
+}
+
+select#soflow, select#soflow-color {
+   -webkit-appearance: button;
+   -webkit-border-radius: 5px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 100% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: 5px;
+   overflow: hidden;
+   padding: 10px ;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 100%;
+}
+.ffff1{
+
+    margin-top:5px;
+   margin-left:320px;
+ }
+
+.div8
+{
+   background-color:#F8F8FF;
+   padding-left:10px;
+
+
+}
+a:link, a:visited {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:link:active, a:visited:active {
+    color: gray;
+}
+.menu1 {
+  background:#808080;
+
+}
+.div8
+{
+    background-color:#F8F8FF;
+}
+.new{
+        float: left;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+
+        color:white;
+        display:block;
+
+     }
+
+     .sidenav {
+    height: 100%;
+    width:0;
+    position: fixed;
+    z-index: 1;
+    top: 100;
+    left: 0;
+
+
+    background-color: #808080;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 30px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #9ACD32;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 40px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+        color:white;
+
+
+     }
+
+
+</style>
+</head>
+
+<title>
+Login
+</title>
+<body>
+<div>
+<img src="{{url_for('static',filename='logo.png')}}" hspace="10" vspace="10" width=150 height=150>
+<a href="/admin_dash"><h3 class="login1">Back</h3></a>
+    <!--<h1 style="margin-top:0px; text-align:center">Pune tiffins</h1>-->
+</div>
+<div class="menu1">
+<i><strong><font size="10" color="white"><center>Roti</center></font><strong></i>
+</div>
+<div class="div8">
+<br>
+<br>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="Add_vegetables">Main Course </a>
+  <a href="Add_rotis">Rotis</a>
+  <a href="Add_rice">Rice</a>
+  <a href="Add_sweets">Sweets</a>
+    <a href="Add_accompaniments">Accompaniments</a></div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+
+<center>
+
+<div class="container">
+    <form name="myForm"
+onsubmit="return validateForm()" method="post" autocomplete="off">
+<fieldset>
+
+<input type="text" name="rotis" placeholder="Add New Rotis" required>
+    <input type="text" name="price" placeholder="Add Price" required>
+<br>
+<br>
+
+<input type="submit" value="Submit">
+</fieldset>
+</form>
+
+</div>
+</center>
+</div>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["rotis"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    alert("Menu Added Successfully ")
+}
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+
+
+</body>
+</html>
+

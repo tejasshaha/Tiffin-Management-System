@@ -1,0 +1,169 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 30%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.center{
+
+ margin-top:50px;
+
+ margin-left:200px;
+
+}
+ .login1{
+
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+
+        color:white;
+        display:block;
+
+     }
+
+.float1{
+   float:left;
+   margin-left:10px;
+   display:inline;
+
+   }
+
+.float2{
+  float:right;
+   margin-right:30px;
+   display:inline;
+   }
+
+ .clear1{
+  clear:both;
+  margin-left:10px;
+   }
+  .center1{
+      margin-top:100px;
+      margin-left:10px;
+      padding-left:10px;
+    }
+.div8
+{
+    background-color:#F8F8FF;
+    border-style: solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+<div class="div8">
+
+
+  <h2 style="color:gray;"><center>Tiffin Planet</center></h2>
+   <div class="float1">
+
+   <h4>Billing Address:</h4>
+       <p><strong>Gajanan maharaj Chowk,Near Muktangan School,Swargate,Pune</strong></p>
+    </div>
+ <div class="float2">
+   <h4>Delivary Address:</h4>
+     <p><strong>{{user.Address}}</strong></p>
+    </div>
+<br>
+<br>
+<br>
+<br>
+  <div class="clear1">
+      <h5>Name:<strong>{{user.name}}</strong></h5>
+      <h5>Order ID:<strong>{{user.id}} </strong> </h5>
+
+  </div>
+<br>
+<div class="row">
+  <div class="column" style="padding-left:35px;  margin-left:60px; background-color: #dddddd;">
+    <table>
+  <tr >
+    <th><h4>Order</h4></th>
+  </tr>
+  {% for a in user3.M_course%}
+  <tr> <th>{{ a }}</th>  </tr>
+  {% endfor %}
+    </table>
+  </div>
+  <div class="column"  style="padding-left:85px; background-color: #dddddd;">
+      <table>
+  <tr >
+    <th><h4>Quantity</h4></th>
+  </tr>
+  {% for b in user3.Quantity%}
+  <tr> <th>{{ b }}</th>  </tr>
+  {% endfor %}
+    </table>
+  </div>
+    <div class="column" style="padding-left:100px;padding-right:0px; background-color: #dddddd;">
+    <table>
+  <tr >
+    <th><h4>Total</h4></th>
+  </tr>
+  {% for c in user3.Cost%}
+  <tr> <th>₹ {{ c }}</th>  </tr>
+  {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br>
+<br>
+    <h5 style="margin-left:10px;">Total Cost is:<strong> ₹ {{user4.Cost}}0/-</strong></h5>
+    <h5 style="margin-left:10px;">Delivary Boy name:<strong>{{user2.D_name}}</strong></h5>
+    <h5 style="margin-left:10px;">Mobile No:<strong>{{user2.Mobile}}</strong></h5>
+
+
+  <br><br><br><br><br>
+
+  <a href="download2-{{trs.name}}" download="Bill"><strong>Download Bill</strong></a>
+<h2>Thank you,Visit again.</h2>
+<br>
+<br>
+<br>
+<br>
+  <center>
+  <a href="pay"><h3 class="login1">Pay Now</h3></a>
+  </center>
+
+ </body>
+</div>
+</html>

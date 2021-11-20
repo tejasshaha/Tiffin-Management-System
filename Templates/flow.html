@@ -1,0 +1,343 @@
+<HTML>
+<head>
+<style>
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>
+	Modernizr.load({
+	    test: Modernizr.borderradius && Modernizr.boxshadow,
+	    nope: "//cdnjs.cloudflare.com/ajax/libs/css3pie/1.0.0/PIE.js",
+	    complete: function(){
+	        if(window.PIE){
+	            $('*').each(function(){
+	                var $this = $(this);
+	                //check if box-shadow or border-radius is applied
+	                if($this.css('box-shadow') || $this.css('border-radius')){
+	                    PIE.attach(this);
+	                }
+	            });
+	        }
+	    }
+	 });
+	</script>
+<link rel="stylesheet" href="process.css">
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+body {margin:0;
+        
+	text-align: center;
+	padding-top: 100px;
+	background: #689976;
+	background: linear-gradient(#689976, #ACDACC);
+	font-family: 'Merriweather Sans', arial, verdana;
+}
+
+.process {
+	/*centering*/
+	display: inline-block;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);
+	overflow: hidden;
+	border-radius: 5px;
+	/*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
+	counter-reset: flag; 
+}
+
+.process a {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	font-size: 20px;
+	line-height: 36px;
+	color: white;
+	/*need more margin on the left of links to accomodate the numbers*/
+	padding: 0 10px 0 60px;
+	background: #666;
+	background: linear-gradient(#666, #333);
+	position: relative;
+}
+/*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
+.process a:first-child {
+	padding-left: 46px;
+	border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+}
+.process a:first-child:before {
+	left: 14px;
+}
+.process a:last-child {
+	border-radius: 0 5px 5px 0; /*this was to prevent glitches on hover*/
+	padding-right: 20px;
+}
+
+/*hover/active styles*/
+.process a.active, .process a:hover{
+	background: #333;
+	background: linear-gradient(#333, #000);
+}
+.process a.active:after, .process a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #333, #000);
+}
+
+/*adding the arrows for the processs using rotated pseudo elements*/
+.process a:after {
+	content: '';
+	position: absolute;
+	top: 0; 
+	right: -18px; /*half of square's length*/
+	/*same dimension as the line-height of .process a */
+	width: 36px; 
+	height: 36px;
+	/*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
+	length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
+	if diagonal required = 1; length = 1/1.414 = 0.707*/
+	transform: scale(0.707) rotate(45deg);
+	/*we need to prevent the arrows from getting buried under the next link*/
+	z-index: 1;
+	/*background same as links but the gradient will be rotated to compensate with the transform applied*/
+	background: #666;
+	background: linear-gradient(135deg, #666, #333);
+	/*stylish arrow design using box shadow*/
+	box-shadow: 
+		2px -2px 0 2px rgba(0, 0, 0, 0.4), 
+		3px -3px 0 2px rgba(255, 255, 255, 0.1);
+	/*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+	border-radius: 0 5px 0 50px;
+}
+/*we dont need an arrow after the last link*/
+.process a:last-child:after {
+	content: none;
+}
+/*we will use the :before element to show numbers*/
+.process a:before {
+	content: counter(flag);
+	counter-increment: flag;
+	/*some styles now*/
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	margin: 8px 0;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	background: #444;
+	background: linear-gradient(#444, #222);
+	font-weight: bold;
+}
+
+
+.flat a, .flat a:after {
+	background: white;
+	color: black;
+	transition: all 0.5s;
+}
+.flat a:before {
+	background: white;
+	box-shadow: 0 0 0 1px #ccc;
+}
+.flat a:hover, .flat a.active, 
+.flat a:hover:after, .flat a.active:after{
+	background: #9EEB62;
+}
+.wrapper {
+ 
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+.menu {
+  background:#808080;
+  
+}
+.menu ul {
+  margin-left: 0;
+  list-style: none;
+  text-align: center;
+  
+}
+.menu ul li {
+  display: inline-block;
+  
+}
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  padding-right:25px;
+  padding-left:25px;
+  
+}
+.menu ul li a:hover {
+  background: 	#9ACD32;
+  color: white;
+}
+.div1
+  {
+    display: inline;
+     clear:both;  
+    
+  }
+  .login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+       
+        color:white; 
+        display:block;
+        
+     }
+.login2{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+        margin-right:16px;
+        color:white;
+        display:block;
+        
+     }
+.button1 {
+    background-color: #527a7a ;
+    border: none;
+    color: white;
+    padding: 15px 80px 8px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    
+    cursor: pointer;
+ 
+   
+}
+.img1 {
+ width: 100px;  
+}
+.div4{
+   float: right;
+  background-color: #b3cccc;
+   height:350px;
+   width:48%;
+   padding-left:10px;
+   /*margin-left:30px;*/
+   margin-right:10px;
+   margin-bottom:10px;
+   
+ 
+}
+.div3{
+  /* float: left;*/
+   background-image: url("salad_pasta.png");
+   height:450px;
+   width:100%;
+   margin-bottom:10px;
+   }
+ .button {
+    background-color: #527a7a ;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    /*text-align: center*/;
+    text-decoration:none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left:200px;
+}
+footer {
+    background-color:#808080;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.div8
+{
+   background-color:#F8F8FF;
+   padding-left:10px;
+   
+ 
+}
+
+</style>
+</head>
+<body>
+<title>
+Concept
+</title>
+<div>
+<img src="{{url_for('static',filename='logo.png')}}" hspace="10" vspace="10" width=150 height=150>
+
+<a href="login"><h3 class="login1">Login</h3></a>
+   <a href="sign_up"><h3 class="login2">Sign up</h3></a>
+<p style="float:right; margin-right:16px; margin-top:25px;">Call us :- 020-24534977</p>
+<img src="{{url_for('static',filename='name.png')}}" style="float:right; " hspace="150" vspace="10" width=400 height=180>
+</div>
+<div class="wrapper">
+  <div class="menu">
+    <ul>
+      <li><a href="/"><font size="5">Home</font></a>
+      </li>
+      <li><a href="menu"><font size="5">Menu</font></a>
+      </li>
+      <li><a href="aboutus"><font size="5">About us</font></a>
+      </li>
+      <li><a href="flow"><font size="5">Concept</font></a>
+      </li>
+      <li><a href="contact_us"><font size="5">Contact us</font></a>
+      </li>
+      <li><a href="faq"><font size="5">FAQS</font></a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+
+<div class="div8">
+<center>
+<p style="font-size:30px;  padding-left:10px; padding-right:10px;">
+GO HEALTHY! EAT HEALTHY! BE HEALTHY!</p>
+</center>
+<p style="font-size:20px;  padding-left:10px; padding-right:10px;">
+Dabba service providers have repetitive menus and at times include food items that are often disliked. You either get annoyed but somehow put up with the service or you end up ordering food from your neighbouring food joint which is not really healthy and an expensive affair.
+At Yummy Tiffins, you get to choose whatever you like for your next meal. The menu does not feel repetitive anymore and you have a tasty well balanced affordable meal anywhere in Pune. </p>
+<br>
+<br>
+
+<center>
+<p style="font-size:20px; padding-left:10px; padding-right:10px;"> Let’s follow these simple steps to help you understand our concept. </p>
+<!-- another version - flat style with animated hover effect -->
+<div class="process flat">
+	<a href="#" class="active">Create an account</a>
+	<a href="#">Make payment</a>
+	<a href="#">Login</a>
+	<a href="#">Select menus</a>
+        <a href="#">Delivered tiffin</a>
+</div>
+</div>
+<center>
+<p style="font-size:20px;  padding-left:10px; padding-right:10px;">
+Your meal will delivered shortly</p> 
+</center>
+<br>
+<br>
+<footer>
+
+<p>Follow us on:</p>
+<img src="{{url_for('static',filename='f.jpg')}}" style="width:80px;height:30px;">
+<p>© 2018, All rights reserved.</p>
+</footer>
+</div>
+
+    
+</body>
+
+</HTML>

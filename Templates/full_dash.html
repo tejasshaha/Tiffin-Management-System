@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+.sidenav {
+    height: 100%;
+    width: 170px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#808080;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.considebar{
+
+    Padding: 8px 8px 6px 30px;
+    text-decoration: none;
+    font-size: 25px;
+    color:#C0C0C0;
+    display: block;
+
+}
+.sidenav a {
+    Padding: 30px 8px 6px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    color:#9ACD32;
+}
+.clear1{
+clear:both;
+
+margin-left:510px;
+
+
+}
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+        color:white; 
+        
+        
+     }
+
+
+.center{
+ margin-top:50px;
+ margin-left:500px;
+}
+</style>
+</head>
+<body>
+<a href="login"><h3 class="login1">Back</h3></a>
+<br><br><br>
+<div class="clear1">
+<img class="abc" src="{{url_for('static',filename='user.gif')}}">
+</div>
+
+ <div class="sidenav">
+    <a href="view_profile-{{a}}">View profile</a>
+    <a href="fullm-{{a}}">Order Online</a>
+    <a href="cust_details1">View Details</a>
+     <a href="add_comment-{{a}}">Add a comment :)</a>
+    <a href="update_profile-{{a}}">Update profile</a>
+
+ </div>
+
+  
+  
+
+</body>
+</html>

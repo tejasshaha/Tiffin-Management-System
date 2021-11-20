@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+       
+        color:white; 
+        display:block;
+        
+     }
+
+footer {
+    background-color:#808080;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.login2{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+        margin-right:16px;
+        color:white;
+        display:block;
+        
+     }
+.wrapper {
+ 
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+.menu {
+  background:#808080;
+  
+}
+.menu ul {
+  margin-left: 0;
+  list-style: none;
+  text-align: center;
+  
+}
+.menu ul li {
+  display: inline-block;
+  
+}
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  padding-right:25px;
+  padding-left:25px;
+  
+}
+.menu ul li a:hover {
+  background: 	#9ACD32;
+  color: white;
+}
+
+input {
+    
+    /*width: 100%;*/
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+.container {
+    width: 65%;
+    background-color:#F8F8FF;
+    padding: 15px;
+}
+.div1 {
+    background-color: lightgrey;
+    width:96%;
+    /*border: 25px solid green;*/
+    padding: 25px 25px;
+   /* margin: 25px;*/
+    
+}
+
+
+</style>
+</head>
+<body>
+<title>
+FAQS
+</title>
+<div>
+<img src="{{url_for('static',filename='logo.png')}}" hspace="10" vspace="10" width=150 height=150>
+
+
+<a href="login"><h3 class="login1">Login</h3></a>
+   <a href="sign_up"><h3 class="login2">Sign up</h3></a>
+<p style="float:right; margin-right:16px; margin-top:25px;">Call us :- 020-24534977</p>
+   <img src="{{url_for('static',filename='name.png')}}" style="float:right; " hspace="150" vspace="10" width=400 height=180>
+</div>
+<div class="wrapper">
+  <div class="menu">
+    <ul>
+      <li><a href="/"><font size="5">Home</font></a>
+      </li>
+      <li><a href="menu"><font size="5">Menu</font></a>
+      </li>
+      <li><a href="aboutus"><font size="5">About us</font></a>
+      </li>
+      <li><a href="flow"><font size="5">Concept</font></a>
+      </li>
+      <li><a href="contact_us"><font size="5">Contact us</font></a>
+      </li>
+      <li><a href="faq"><font size="5">FAQS</font></a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<h1 style="color:#9ACD32"> FAQS </h1>
+<div class="div1">
+<details>
+  <summary style="font-size:20px;">How does this concept work?</summary>
+  <p>Yummy Tiffins is India’s first customized online tiffin service. Follow the following simple steps to join yummy tiffins.
+<p> 1. Sign up/ Register (Please fill detailed address with pincode and landmark)</p>
+<p>2. You can recharge your wallet via debit card/ credit card</p>
+<p>3. Choose customized meal </p>
+
+  </details>
+</div>
+<br>
+<div class="div1">
+<details>
+  <summary style="font-size:20px;">Do I need to log in every day on the website to place an order?</summary>
+  <p>You need to login everyday to select your meal as menu get updated every day</p>
+  </details>
+</div>
+<br>
+<div class="div1">
+<details>
+  <summary style="font-size:20px;">Is there any minimum monthly/weekly commitment?</summary>
+  <p>There is no minimum monthly/ weekly commitment to order meals from us.</p>
+  <p>You can place orders as and when you want.</p>
+
+  </details>
+</div>
+<br>
+<div class="div1">
+<details>
+  <summary style="font-size:20px;">How much is the delivery charge?</summary>
+  <p>There is no delivery charges.It is absolutely free :)</p>
+  </details>
+</div>
+<br>
+<div class="div1">
+<details>
+  <summary style="font-size:20px;">How do I check my order history?</summary>
+  <p>You can always check your history by visiting view details on your dashboard and just you have to enter date for which you want to see your details.</p>
+  </details>
+</div>
+<br>
+<div class="div1">
+<details>
+  <summary style="font-size:20px;">How do I do if order does not get delivered to me?</summary>
+  <p>At Happy Tiffins, we put in a lot of effort to ensure that your order reaches you on time and in an ideal condition. However, due to unforeseen events your order may reach you late and in rare cases may be undelivered. In such a circumstance, please contact the delivery guys or contact us. We assure you that every attempt will be made to rectify the situation or compensate you.</p>
+  </details>
+
+</div>
+  <footer>
+
+<p>Follow us on:</p>
+<img src={{url_for('static',filename='f.jpg')}} style="width:80px;height:30px;">
+<p>© 2018, All rights reserved.</p>
+</footer>
+
+
+
+
+</body>
+</html>

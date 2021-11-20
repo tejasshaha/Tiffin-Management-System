@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+
+<style>
+body {margin:0;}
+
+.mySlides {
+    display:none;
+    
+}
+.wrapper {
+ /* padding-top: 5px;*/
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+.menu {
+  background:#808080;
+  
+}
+.menu ul {
+  margin-left: 0;
+  list-style: none;
+  text-align: center;
+  
+}
+.menu ul li {
+  display: inline-block;
+  
+}
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  padding-right:25px;
+  padding-left:25px;
+  
+}
+.menu ul li a:hover {
+  background: 	#9ACD32;
+  color: white;
+}
+.div1
+  {
+    display: inline;
+     clear:both;  
+    
+  }
+  .login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+       
+        color:white; 
+        display:block;
+        
+     }
+.login2{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+        margin-right:16px;
+        color:white;
+        display:block;
+        
+     }
+/*.abc{
+margin-left:600px;
+margin-right:600px;
+margin-top:20px;
+margin-bottom:10px;
+
+}*/
+/*.div2{
+   background-color:white;
+   height:470px;
+}*/
+.button1 {
+    background-color: #527a7a ;
+    border: none;
+    color: white;
+    padding: 15px 80px 8px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    
+    cursor: pointer;
+ 
+   
+}
+.img1 {
+ width: 100px;  
+}
+
+.fieldset1 { 
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 0.35em;
+    padding-bottom: 1.00em;
+    padding-left: 0.10em;
+    padding-right: 0.10em;
+    max-width:30%;
+    border: 2px groove (internal value);
+}
+.fieldset2 { 
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 0.35em;
+    padding-bottom: 1.00em;
+    padding-left: 0.10em;
+    padding-right: 0.10em;
+    max-width:100%;
+    border: 2px groove (internal value);
+}
+
+.field1{
+   float:left;
+ 
+ 
+}
+.field2{
+   float:right;
+
+}
+
+.field3{
+   float:left;
+ 
+ 
+}
+.field4{
+   float:right;
+
+}
+
+.div4{
+   float: right;
+  background-color: #b3cccc;
+   height:350px;
+   width:48%;
+   padding-left:10px;
+   /*margin-left:30px;*/
+   margin-right:10px;
+   margin-bottom:10px;
+   
+ 
+}
+.div3{
+  /* float: left;*/
+   background-image: url('static/salad_pasta.png');
+
+   height:450px;
+   width:100%;
+ /*padding-left:10px;
+ margin-left:10px;
+ margin-right:10px;*/
+   
+  
+  margin-bottom:10px;
+   }
+ .button {
+    background-color: #527a7a ;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    /*text-align: center*/;
+    text-decoration:none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left:200px;
+}
+footer {
+    background-color:#808080;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+.div8
+{
+   background-color:#F8F8FF;
+   padding-left:10px;
+   
+ 
+}
+
+</style>
+</head>
+<body>
+<title>
+Home
+</title>
+<div>
+<img src="{{url_for('static',filename='logo.png')}}"  hspace="10" vspace="10" width=150 height=150>
+<!--<h1 style="margin-top:0px; text-align:center">Pune tiffins</h1>-->
+  <a href="login"><h3 class="login1">Login</h3></a>
+   <a href="sign_up"><h3 class="login2">Sign up</h3></a>
+<p style="float:right; margin-right:16px; margin-top:25px;">Call us :- 020-24534977</p>
+
+  <img src="{{url_for('static',filename='name.png')}}" style="float:right; " hspace="150" vspace="10" width=400 height=180>
+
+
+</div>
+<div class="wrapper">
+  <div class="menu">
+    <ul>
+      <li><a href="/"><font size="5">Home</font></a>
+      </li>
+      <li><a href="menu"><font size="5">Menu</font></a>
+      </li>
+      <li><a href="aboutus"><font size="5">About us</font></a>
+      </li>
+      <li><a href="flow"><font size="5">Concept</font></a>
+      </li>
+      <li><a href="contact_us"><font size="5">Contact us</font></a>
+      </li>
+      <li><a href="faq"><font size="5">FAQ</font></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<center>
+<div class="w3-content w3-section" width="100%" height="500" >
+  <img class="mySlides" src={{url_for('static',filename='tiffin2.jpg')}} width="100%" height="400">
+  <img class="mySlides" src={{url_for('static',filename='tiffin3.jpg')}} width="100%" height="400">
+  <img class="mySlides" src={{url_for('static',filename='tiffin7.jpg')}} width="100%" height="400">
+  <img class="mySlides" src={{url_for('static',filename='tiffin4.jpg')}} width="100%" height="400">
+</div>
+
+<div class="div8">
+<div align="center" class="fieldset1">
+  <fieldset class>
+    
+   <img src={{url_for('static',filename='tray.png')}}>
+     <h2  style="color:#808080;">ORDER TIME</h2>
+     <h4>Lunch :  Same day Before 7am</h4>
+     <h4>Dinner : Same day before 1pm</h4>
+     <h2 style="color:#808080;">CANCELATION TIME</h2>
+     <h4>Lunch :  Same day before 7am</h4>
+     <h4>Dinner : Same day before 1pm</h4>
+
+
+</fieldset>
+	</div>
+	</div>
+</center>
+
+<div class="div3">
+<br>  
+<center>
+<h1 style="color:white;">HEALTHY MEAL</h1>
+<h3 style="color:white;">We provide tiffin services for your mental and physical well being by making sure you get all the nutrients necessary.</h3>
+<h3 style="color:white;"> A proper combination of Whole grains,Proteins,Fibre,Probiotic along with adequate spices so as there is no compromise on your taste buds.</h3>
+<br>
+<div align="center" class="fieldset1">
+<fieldset >
+<legend style="color:white; font-size:35px;">MEALS START</legend>
+<h3 style="color:white;">Full Tiffin : Rs.50</h3>
+<h3  style="color:white;">Half Tiffin :Rs.30</h3>
+</fieldset>
+</div>
+</center>
+<br>
+<br>
+<br>
+<div class="div8">
+<h1  style="color:#808080"><center>Why Us?</center></h1>
+
+<p style="font-size:20px;  padding-left:10px; padding-right:10px;">
+Although you would love to have that fulfilling home cooked meal you enjoyed back in school days it's difficult to manage anything close to that with your busy schedule. What most of us end up eating is not really healthy and at times to our horror even unhygienic food, nutritious meal has become "out of sight, out of mind". It's very important for you to get your daily nutrition - too less or too much is equally harmful, what your health demands is a well balanced and healthy tiffin service.</p>
+<p style="font-size:25px; color:#808080;  padding-left:10px; padding-right:10px;">"A well balanced and healthy meal can now reach in any nook or corner of Pune. Choose what you would like for your next meal and we promise to deliver tiffins in Pune"</p>
+<br>
+<br>
+</div>
+<center>
+<img src={{url_for('static',filename='n4.png')}}>
+<img src={{url_for('static',filename='n3.png')}}>
+<img src={{url_for('static',filename='n2.png')}}>
+</center>
+
+<footer>
+
+<p>Follow us on:</p>
+<img src={{url_for('static',filename='f.jpg')}} style="width:80px;height:30px;">
+<p>© 2018, All rights reserved.</p>
+</footer>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
+
+

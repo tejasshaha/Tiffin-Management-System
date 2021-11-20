@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+.menu1 {
+  background:#808080;
+
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    border: 3px solid #73AD21;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+    margin-left:5px;
+    padding: 100px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+abc {
+position: fixed;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.div8
+{
+    background-color:#F8F8FF;
+}
+
+ .login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+
+        color:white;
+        display:block;
+
+     }
+
+ .new{
+        float: left;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+
+        color:white;
+        display:block;
+
+     }
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+</head>
+
+<body>
+<form method="POST" onsubmit="return validateForm()">
+
+<div >
+<img class="abc" src="{{url_for('static',filename='logo.png')}}" width=150 height=150>
+
+    <a href="/admin_dash"><h3 class="login1">Back</h3></a>
+</div>
+<br>
+<div class="menu1">
+<i><strong><font size="10" color="white"><center>Main Cource</center></font></strong></i>
+</div>
+<div class="div8">
+<br>
+<br>
+
+      <div class="row">
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3>Main Course</h3></th>
+  </tr>
+
+      <tr>
+    <td><input type="checkbox" name="bhendi_fry" value="">Bhendi Fry </td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="palak_paneer" value="">Palak Paneer </td>
+  </tr>
+
+        <tr>
+    <td><input type="checkbox" name="turai" value="">Turai </td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="aloo_lahsuni" value="">Aloo Lahsuni </td>
+</tr>
+
+<tr>
+    <td><input type="checkbox" name="jain_daal" value="">Jain Daal  </td>
+  </tr>
+
+  {% for c in user.M_course%}
+   <tr>
+    <td><input type="checkbox" name="bhendi_fry" value="">{{c}}</td>
+  </tr>
+  {% endfor %}
+    </table>
+  </div>
+
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>Price</center></h3></th>
+  </tr>
+
+  <tr>
+            <td>₹ 30</td>
+        </tr>
+    <tr>
+            <td>₹ 40</td>
+        </tr>
+      <tr>
+            <td>₹ 30</td>
+        </tr>
+  <tr>
+            <td>₹ 30</td>
+        </tr>
+  <tr>
+            <td>₹ 30</td>
+        </tr>
+
+  {% for d in user.price%}
+   <tr><td>₹ {{d}}</td></tr>
+  {% endfor %}
+    </table>
+  </div>
+
+      </div>
+
+
+    <br>
+<div class="menu1">
+<i><strong><font size="10" color="white"><center>Rotis</center></font></strong></i>
+</div>
+
+<div class="div8">
+<br>
+<br>
+
+      <div class="row">
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3>Rotis</h3></th>
+  </tr>
+        <tr>
+    <td><input type="checkbox" name="plain_roti" value="">Plain Roti  </td>
+  </tr>
+
+      <tr>
+    <td><input type="checkbox" name="phulkaa" value="">Phulkaa </td>
+  </tr>
+  {% for a in user2.Rotis%}
+   <tr>
+    <td><input type="checkbox" name="bhendi_fry" value="">{{a}}</td>
+  </tr>
+  {% endfor %}
+    </table>
+  </div>
+
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>Price</center></h3></th>
+  </tr>
+        <tr>
+            <td>₹ 6</td>
+        </tr>
+
+        <tr>
+            <td>₹ 5</td>
+        </tr>
+
+  {% for b in user2.price%}
+   <tr><td>₹ {{b}}</td></tr>
+  {% endfor %}
+    </table>
+  </div>
+
+      </div>
+
+
+    <br>
+<div class="menu1">
+<i><strong><font size="10" color="white"><center>Rice</center></font></strong></i>
+</div>
+
+<div class="div8">
+<br>
+<br>
+
+      <div class="row">
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3>Rice</h3></th>
+  </tr>
+          <tr>
+    <td><input type="checkbox" name="fried_rice" value="">Fried Rice  </td>
+  </tr>
+          <tr>
+    <td><input type="checkbox" name="paneer_pulav" value="">Paneer Pulav  </td>
+  </tr>
+  {% for e in user1.Rice%}
+   <tr>
+    <td><input type="checkbox" name="bhendi_fry" value="">{{e}}</td>
+  </tr>
+  {% endfor %}
+    </table>
+  </div>
+
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>Price</center></h3></th>
+  </tr>
+        <tr>
+            <td>₹ 40</td>
+        </tr>
+        <tr>
+            <td>₹ 50</td>
+        </tr>
+  {% for f in user1.price%}
+   <tr><td>₹ {{f}}</td></tr>
+  {% endfor %}
+    </table>
+  </div>
+
+      </div>
+
+
+    <br>
+<div class="menu1">
+<i><strong><font size="10" color="white"><center>Sweets</center></font></strong></i>
+</div>
+
+<div class="div8">
+<br>
+<br>
+
+      <div class="row">
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3>Sweets</h3></th>
+  </tr>
+            <tr>
+    <td><input type="checkbox" name="shrikhand" value="">Shrikhand  </td>
+  </tr>
+          <tr>
+    <td><input type="checkbox" name="gulab_jamun" value="">Gulab Jamun  </td>
+  </tr>
+  {% for g in user3.Sweets%}
+   <tr>
+    <td><input type="checkbox" name="bhendi_fry" value="">{{g}}</td>
+  </tr>
+  {% endfor %}
+    </table>
+  </div>
+
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>Price</center></h3></th>
+  </tr>
+        <tr>
+            <td>₹ 25</td>
+        </tr>
+        <tr>
+            <td>₹ 25</td>
+        </tr>
+  {% for h in user3.price%}
+   <tr><td>₹ {{h}}</td></tr>
+  {% endfor %}
+    </table>
+  </div>
+
+      </div>
+
+        <br>
+<div class="menu1">
+<i><strong><font size="10" color="white"><center>Accompaniments</center></font></strong></i>
+</div>
+
+<div class="div8">
+<br>
+<br>
+
+      <div class="row">
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3>Accompaniments</h3></th>
+  </tr>
+            <tr>
+    <td><input type="checkbox" name="masala_chaas" value="">Masala Chaas  </td>
+  </tr>
+          <tr>
+    <td><input type="checkbox" name="curd" value="">Curd  </td>
+  </tr>
+  {% for i in user4.Accompaniments%}
+   <tr>
+    <td><input type="checkbox" name="bhendi_fry" value="">{{i}}</td>
+  </tr>
+  {% endfor %}
+    </table>
+  </div>
+
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>Price</center></h3></th>
+  </tr>
+        <tr>
+            <td>₹ 25</td>
+        </tr>
+        <tr>
+            <td>₹ 20</td>
+        </tr>
+  {% for j in user4.price%}
+   <tr><td>₹ {{j}}</td></tr>
+  {% endfor %}
+    </table>
+  </div>
+
+      </div>
+
+
+
+    <center>
+<input type="submit" class="button" value="submit">
+</center>
+</div>
+<script>
+function validateForm()
+    {
+            alert("Menu Updated Successfully")
+    }
+</script>
+
+</form>
+</body>
+</html>
+

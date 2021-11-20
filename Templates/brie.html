@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+.menu1 {
+  background:#808080;
+
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    border: 3px solid #73AD21;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+    margin-left:5px;
+    padding: 100px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+abc {
+position: fixed;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.div8
+{
+    background-color:#F8F8FF;
+}
+
+ .login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+
+        color:white;
+        display:block;
+
+     }
+
+ .new{
+        float: left;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+
+        color:white;
+        display:block;
+
+     }
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+</head>
+
+<body>
+<form method="POST" onsubmit="return validateForm()">
+
+<div >
+<img class="abc" src="{{url_for('static',filename='logo.png')}}" width=150 height=150>
+
+    <a href="/"><h3 class="login1">Logout</h3></a>
+</div>
+<br>
+<div class="menu1">
+<i><strong><font size="10" color="white"><center>Main Cource</center></font><strong></i>
+</div>
+<div class="div8">
+<br>
+<br>
+
+      <div class="row">
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3>Main Course</h3></th>
+  </tr>
+  {% for c in user.M_course%}
+   <tr>
+    <td><input type="checkbox" name="bhendi_fry" value="">{{c}}</td>
+  </tr>
+  {% endfor %}
+    </table>
+  </div>
+
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>Price</center></h3></th>
+  </tr>
+  {% for d in user.price%}
+   <tr><td>{{d}}</td></tr>
+  {% endfor %}
+    </table>
+  </div>
+
+      </div>
+
+<center>
+<input type="submit" class="button" value="submit">
+</center>
+</div>
+<script>
+function validateForm()
+    {
+            alert("Menu Updated Successfully")
+    }
+</script>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  * {
+    box-sizng: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {margin:0;}
+
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+
+}
+
+td, th {
+   /* border: 1px solid #dddddd;*/
+    text-align: left;
+    padding: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom:10px;
+
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+abc {
+position: fixed;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.menu1 {
+  background:#808080;
+
+}
+.div8
+{
+    background-color:#F8F8FF;
+}
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+        color:white;
+
+
+     }
+
+</style>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  <script src="{{url_for('static',filename='chart.min.js')}}"></script>
+</head>
+
+<body>
+<div >
+<img class="abc" src="{{url_for('static',filename='logo.png')}}" width=150 height=150>
+<a href="/admin_dash"><h3 class="login1">Back</h3></a>
+</div>
+<br>
+
+  <center>
+    <h1>{{ title }}</h1>
+  </center>
+  <center>
+    <canvas id="chart" width="600" height="400"></canvas>
+    <script>
+      // bar chart data
+      var barData = {
+        labels : [
+          {% for item in labels %}
+           "{{ item }}",
+          {% endfor %}
+	],
+        datasets : [{
+          fillColor: "rgba(151,187,205,0.2)",
+          strokeColor: "rgba(151,187,205,1)",
+          pointColor: "rgba(151,187,205,1)",
+          data : [
+            {% for item in values %}
+               "{{ item }}",
+              {% endfor %}
+	    ]
+          }
+        ]
+      }
+
+     // get bar chart canvas
+     var mychart = document.getElementById("chart").getContext("2d");
+       steps = 10
+       max = {{max}}
+     // draw bar chart
+     new Chart(mychart).Bar(barData, {
+       scaleOverride: true,
+       scaleSteps: steps,
+       scaleStepWidth: Math.ceil(max / steps),
+       scaleStartValue: 0,
+       scaleShowVerticalLines: true,
+       scaleShowGridLines : true,
+       barShowStroke : true,
+       scaleShowLabels: true
+       }
+     );
+    </script>
+  </center>
+</body>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <div class="menu1">
+<i><strong><font size="10" color="white"><center>Monthly Collection</center></font><strong></i>
+</div>
+
+<div class="div8">
+<br>
+  <div class="row">
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>First Name</center></h3></th>
+  </tr>
+  {% for a in user.first_name%}
+  <tr> <th>{{a}}</th>  </tr>
+  {% endfor %}
+    </table>
+  </div>
+
+
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>Payment Date</center></h3></th>
+  </tr>
+  {% for b in user.pdate%}
+  <tr> <th>{{b}}</th>  </tr>
+  {% endfor %}
+    </table>
+
+  </div>
+
+
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>Amount</center></h3></th>
+  </tr>
+  {% for c in user.amount%}
+  <tr> <th>{{c}}</th>  </tr>
+  {% endfor %}
+    </table>
+  </div>
+
+
+  <div class="column">
+    <table>
+  <tr >
+    <th><h3><center>Type</center></h3></th>
+  </tr>
+  {% for d in user.type%}
+  <tr> <th>{{d}}</th>  </tr>
+  {% endfor %}
+    </table>
+
+  </div>
+  </div>
+  <br>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+
+<html>
+<head>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#808080;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.considebar{
+
+    Padding: 8px 8px 6px 30px;
+    text-decoration: none;
+    font-size: 25px;
+    color:#C0C0C0;
+    display: block;
+
+}
+.sidenav a {
+    Padding: 50px 8px 20px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    color:#9ACD32;
+}
+
+.center{
+ margin-top:50px;
+ margin-left:500px;
+}
+.clear1{
+clear:both;
+
+margin-left:420px;
+
+}
+
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+        color:white;
+     }
+.navbar {
+    overflow: hidden;
+    background-color: #808080;
+
+}
+
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 50px 8px 20px 30px;
+    text-decoration: none;
+}
+
+.Payment {
+    float: left;
+    overflow: hidden;
+}
+
+.Payment .dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 50px 8px 20px 30px;
+    background-color:#808080 ;
+
+
+
+}
+
+
+.Payment-content {
+    display: none;
+    float: right;
+    position: absolute;
+    background-color: #808080;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.Payment-content a {
+    float: center;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.Payment-content a:hover {
+    background-color: white;
+}
+
+.Payment:hover .Payment-content {
+    display: block;
+}
+
+</style>
+</head>
+<body>
+
+<a href="/"><h3 class="login1">Logout</h3></a>
+
+<div class="clear1">
+<img class="abc" src={{url_for('static',filename='adminlogin.JPG')}} >
+</div>
+ <div class="sidenav">
+    <a href="admin_select">Select Menu</a>
+     <a href="Add_vegetables">Add Menu</a>
+     <a href="todays_order">Order details</a>
+    <div class="navbar">
+  <div class="Payment">
+
+  <button class="dropbtn">customer details
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="Payment-content">
+      <a href="guest_details">Guest</a>
+      <a href="monthly_full_details">Monthly Full Tiffin</a>
+      <a href="monthly_half_details">Monthly Half Tiffin</a>
+    </div>
+
+  </div>
+        <a href="golden_customers">Golden Customers</a>
+</div>
+    <a href="delievery_boy_detail">Delivery boy details</a>
+
+        <a href="account_details">Account Details</a>
+
+     <a href="comment">Comments/suggestions</a>
+ </div>
+
+  
+  
+
+</body>
+</html>

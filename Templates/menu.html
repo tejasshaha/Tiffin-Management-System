@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.menu {
+  background:#808080;
+
+}
+.menu ul {
+  margin-left: 0;
+  list-style: none;
+  text-align: center;
+
+}
+.menu ul li {
+  display: inline-block;
+
+}
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  padding-right:25px;
+  padding-left:25px;
+
+}
+.menu ul li a:hover {
+  background: 	#9ACD32;
+  color: white;
+}
+
+body {margin:0;}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding-left: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;	
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+abc {
+position: fixed;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.wrapper {
+ /* padding-top: 5px;*/
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+.menu1 {
+  background:#808080;
+
+}
+.div8
+{
+    background-color:#F8F8FF; 
+}
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+        color:white; 
+        
+        
+     }
+.login2{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+        margin-right:16px;
+        color:white;
+        display:block;
+
+     }
+footer {
+    background-color:#808080;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+</style>
+</head>
+<title>
+Guest
+</title>
+
+<body>
+<form method="POST">
+<div >
+<img class="abc" src="{{url_for('static',filename='logo.png')}}" width=150 height=150>
+<a href="login"><h3 class="login1">Login</h3></a>
+   <a href="sign_up"><h3 class="login2">Sign up</h3></a>
+    <p style="float:right; margin-right:16px; margin-top:25px;">Call us :- 020-24534977</p>
+
+  <img src="{{url_for('static',filename='name.png')}}" style="float:right; " hspace="150" vspace="10" width=400 height=150>
+
+</div>
+<div class="wrapper">
+  <div class="menu">
+    <ul>
+<li><a href="/"><font size="5">Home</font></a>
+      </li>
+      <li><a href="menu"><font size="5">Menu</font></a>
+      </li>
+      <li><a href="aboutus"><font size="5">About us</font></a>
+      </li>
+      <li><a href="flow"><font size="5">Concept</font></a>
+      </li>
+      <li><a href="contact_us"><font size="5">Contact us</font></a>
+      </li>
+      <li><a href="faq"><font size="5">FAQS</font></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<br>
+<div class="div8">
+<fieldset>
+<legend>
+<h1  style="color:grey">Today's special</h1>
+</legend>
+
+<h1 style="background-color:#bfbfbf"><u><center>   	Main cource    </center></u></h1>
+
+<table>
+  <tr >
+    <th>ITEM</th>
+    <th>PRICE</th>
+
+  </tr>
+   <tr>
+    <td><input type="checkbox" name="bhendi_fry" value="">{{user.name[0]}} </td>
+    <td>₹ {{user.price[0]}}</td>
+
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="palak_paneer" value="">{{user.name[1]}}</td>
+    <td>₹ {{user.price[1]}}</td>
+
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="turai" value="">{{user.name[2]}}</td>
+    <td>₹ {{user.price[2]}}</td>
+
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="aloo_lahsuni" value="">{{user.name[3]}} </td>
+    <td>₹ {{user.price[3]}}</td>
+
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="jain_daal" value="">{{user.name[4]}} </td>
+    <td>₹ {{user.price[4]}}</td>
+
+  </tr>
+</table>
+<h1 style="background-color:#bfbfbf"><u><center>   	Rotis     </center></u></h1>
+<table>
+  <tr>
+    <th>ITEM</th>
+    <th>PRICE</th>
+
+  </tr>
+   <tr>
+    <td><input type="checkbox" name="masala_puri" value="">{{user1.name[0]}}</td>
+    <td>₹ {{user1.price[0]}}</td>
+
+  </tr>
+
+   <tr>
+    <td><input type="checkbox" name="phulkaa" value="">{{user1.name[1]}}</td>
+    <td>₹ {{user1.price[1]}}</td>
+
+  </tr>
+
+   <tr>
+    <td><input type="checkbox" name="phulkaa_ghee" value="">{{user1.name[2]}}</td>
+    <td>₹ {{user1.price[2]}}</td>
+
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="multigrain_roti" value="">{{user1.name[3]}}</td>
+    <td>₹ {{user1.price[3]}}</td>
+
+  </tr>
+
+</table>
+<h1 style="background-color:#bfbfbf"><u><center>	Rice     </center> </u></h1>
+<table>
+  <tr>
+    <th>ITEM</th>
+    <th>PRICE</th>
+
+  </tr>
+   <tr>
+    <td><input type="checkbox" name="fried_rice" value="">{{user2.name[0]}}</td>
+    <td>₹ {{user2.price[0]}}</td>
+
+  </tr>
+
+   <tr>
+    <td><input type="checkbox" name="plain_rice" value="">{{user2.name[1]}}</td>
+    <td>₹ {{user2.price[1]}}</td>
+
+  </tr>
+
+   <tr>
+    <td><input type="checkbox" name="veg_pulav" value="">{{user2.name[2]}}</td>
+    <td>₹ {{user2.price[2]}}</td>
+
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="jira_rice" value="">{{user2.name[3]}}</td>
+    <td>₹ {{user2.price[3]}}</td>
+
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="paneer_pulav" value="">{{user2.name[4]}} </td>
+    <td>₹ {{user2.price[4]}}</td>
+
+  </tr>
+
+</table>
+<h1 style="background-color:#bfbfbf"><u><center>	Sweets      </center></u></h1>
+<table>
+  <tr>
+    <th>ITEM</th>
+    <th>PRICE</th>
+
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="gulab_jamun" value="">{{user3.name[0]}} </td>
+    <td>₹ {{user3.price[0]}}</td>
+
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="shrikhand" value="">{{user3.name[1]}}</td>
+    <td>₹ {{user3.price[1]}}</td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="amrakhand" value="">{{user3.name[2]}}</td>
+    <td>₹ {{user3.price[2]}}</td>
+  </tr>
+
+    <tr>
+    <td><input type="checkbox" name="rabdi" value="">{{user3.name[3]}}</td>
+    <td>₹ {{user3.price[3]}}</td>
+  </tr>
+
+</table>
+    <h1 style="background-color:#bfbfbf"><u>  <center> 	Accompaniments </center>    </u></h1>
+  <table>
+ <tr >
+    <th>ITEM</th>
+    <th>PRICE</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="masala_chaas" value="">{{user4.name[0]}}</td>
+    <td>₹ {{user4.price[0]}}</td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="curd" value="">{{user4.name[1]}}</td>
+    <td>₹ {{user4.price[1]}}</td>
+  </tr>
+
+      <tr>
+    <td><input type="checkbox" name="salad" value="">{{user4.name[2]}}</td>
+    <td>₹ {{user4.price[2]}}</td>
+
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="roasted_papad" value="">{{user4.name[3]}}</td>
+    <td>₹ {{user4.price[3]}}</td>
+
+  </tr>
+
+
+</table>
+
+</fieldset>
+
+</div>
+</form>
+  <footer>
+
+<p>Follow us on:</p>
+<img src={{url_for('static',filename='f.jpg')}} style="width:80px;height:30px;">
+<p>© 2018, All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+

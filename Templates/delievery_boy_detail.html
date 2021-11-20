@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #009900
+
+;
+
+  top: 100;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black
+;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background:#ff751a;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+abc {
+position: fixed;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<form method="POST">
+
+<div >
+<img class="abc" src="{{url_for('static',filename='logo.png')}}" width=150 height=150>
+</div>
+<br>
+<div class="navbar">
+  <a href="#home"><bold>Home</bold></a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>
+<br>
+<br>
+
+<i><strong><font size="15" color="gray" ><center>Delievery Boy Details</center></font></strong></i>
+
+  <div class="row">
+  <div class="column">
+    <table>
+  <tr >
+    <th><h2>Name</h2></th>
+    <th><h2>Area1</h2></th>
+    <th><h2>Area2</h2></th>
+    <th><h2>Area3</h2></th>
+    <th><h2>Area4</h2></th>
+    <th><h2>Mobile</h2></th>
+  </tr>
+  <tr>
+      <th><h3>Amartya</h3></th>
+      {% for a in user.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>7744094540</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Saurabh</h3></th>
+      {% for a in user1.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>9145757577</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Rohan</h3></th>
+      {% for a in user2.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>8775899021</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Vishal</h3></th>
+      {% for a in user3.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>7858986542</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Chaitanya</h3></th>
+      {% for a in user4.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>9890997955</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Ashish</h3></th>
+      {% for a in user5.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>8650124578</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Rushikesh</h3></th>
+      {% for a in user6.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>7507560217</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Swaraj</h3></th>
+      {% for a in user7.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>8208265536</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Aditya</h3></th>
+      {% for a in user8.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>9945875711</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Rutvij</h3></th>
+      {% for a in user9.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>9145297933</h3></th>
+  </tr>
+
+  <tr>
+      <th><h3>Mandar</h3></th>
+      {% for a in user10.area%}
+
+            <th><h3>{{a}}</h3></th>
+
+      {% endfor %}
+      <th><h3>8708760625</h3></th>
+  </tr>
+
+    </table>
+  </div>
+  </div>
+
+
+<br>
+
+</form>
+</body>
+</html>
+

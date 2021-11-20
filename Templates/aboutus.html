@@ -1,0 +1,186 @@
+<html>
+<head>
+<style>
+
+
+.div1
+  {
+    display: inline;
+     clear:both;  
+    
+  }
+  .login1{
+        float: right;
+        padding: 17px 20px;
+        font-size: 20px;
+       background-color:#110BBF ;
+        color:white; !important;
+        display:block;
+        
+     }
+.login2{
+        float: right;
+        padding: 17px 20px;
+        font-size: 20px;
+       background-color:#110BBF ;
+        color:white; !important;
+        display:block;
+        
+     }
+.img1 {
+ width: 100px;  
+}
+
+.wrapper {
+ /* padding-top: 5px;*/
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+.menu {
+  background:#808080;
+  
+}
+.menu ul {
+  margin-left: 0;
+  list-style: none;
+  text-align: center;
+  
+}
+.menu ul li {
+  display: inline-block;
+  
+}
+.menu ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  padding-right:25px;
+  padding-left:25px;
+  
+}
+.menu ul li a:hover {
+  background: 	#9ACD32;
+  color: white;
+}
+
+.active {
+    background-color: #110BBF;
+}
+footer {
+    background-color:#808080;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+       
+        color:white; 
+        display:block;
+        
+     }
+.login2{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+        margin-right:16px;
+        color:white;
+        display:block;
+        
+     }
+.div8
+{
+   background-color:#F8F8FF;
+}
+
+
+</style>
+</head>
+<body>
+</body>
+<div>
+<img src="{{url_for('static',filename='logo.png')}}"  hspace="10" vspace="10" width=150 height=150>
+<!--<h1 style="margin-top:0px; text-align:center">Pune tiffins</h1>-->
+  <a href="login"><h3 class="login1">Login</h3></a>
+   <a href="sign_up"><h3 class="login2">Sign up</h3></a>
+<p style="float:right; margin-right:16px; margin-top:25px;">Call us :- 020-24534977</p>
+
+  <img src="{{url_for('static',filename='name.png')}}" style="float:right; " hspace="150" vspace="10" width=400 height=180>
+
+
+</div>
+<div class="wrapper">
+  <div class="menu">
+    <ul>
+      <li><a href="/"><font size="5">Home</font></a>
+      </li>
+      <li><a href="menu"><font size="5">Menu</font></a>
+      </li>
+      <li><a href="aboutus"><font size="5">About us</font></a>
+      </li>
+      <li><a href="flow"><font size="5">Concept</font></a>
+      </li>
+      <li><a href="contact_us"><font size="5">Contact us</font></a>
+      </li>
+      <li><a href="faq"><font size="5">FAQS</font></a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+<div class="div8">
+    
+     <h1 style="color:gray"><center>ABOUT US</center></h1>
+<h2 style="color:#9ACD32; margin-left:50px;">One can't Live well if one hasn't Dined well!</h2>
+<h3 style="margin-left:50px;">This is our mantra at TiffinBox.</h3>
+
+<p style="margin-left:50px;font-size:20;">We bring you healthy and balanced meals, with a dash of fun and a sprinkle of deliciousness for a healthier and happier You! Our signature healthy recipes are designed by our in-house nutrition experts to help you achieve your health goals.</p>
+
+    
+ <h2 style="color:#gray; margin-left:50px;"><u>WHY OUR TIFFIN</u></h2>
+ <ul>
+  <h3><li>Location</li></h3>
+  <p style="font-size:20;">Sign up for tiffin services in Andheri West or join us for tiffin services from Lower Parel or even register from Thane or Borivali, we will not say a ‘NO’. We deliver just everywhere</p>
+
+  <h3><li>Affordable prices.</li></h3>
+  <p style="font-size:20;">Customized lunch and dinner tiffin services in Pune start at just Rs.50/- The food that you eat is healthy, yummy at the same time it’s affordable.
+  <p>
+ 
+  <h3><li>Fresh ingredients.</li></h3>
+  <p style="font-size:20;">Everyday fresh vegetable of the best quality are procured to ensure that the food that you eat is good for your health.</p>
+
+  <h3><li>Tasty Food.</li></h3>
+<p style="font-size:20;">Our experienced chefs ensure that the food you eat has the perfect mix of spices. The food that you eat is not too spicy or too oily at the same time it’s very tasty.
+  </p>
+
+ <h3><li>Select your own menu.</li></h3>
+<p style="font-size:20;">You can select your own menu with the help of our unique E-menu feature, because you deserve to eat what you like.</p>
+
+  <h3><li>Disposable containers.</li></h3>
+<p style="font-size:20;">Food is packed in disposable plastic containers. All these containers are carefully packed in a disposable bag. This ensures that there are no chances of contamination.</p>
+
+<h3><li>No preservatives/ artificial color/pre-cooked gravies.</li></h3>
+<p style="font-size:20;">No artificial preservatives, colors or pre-cooked gravies to make the food look attractive. The food that you eat is just like the way food cooked at home.</p>
+
+<h3><li>Experienced cooks.</li></h3>
+<p style="font-size:20;">Our cooks have more than a decade of experience in catering industry.</p>
+</ul>
+<footer>
+
+<p>Follow us on:</p>
+<img src="{{url_for('static',filename='f.jpg')}}" style="width:80px;height:30px;">
+<p>© 2018, All rights reserved.</p>
+</footer>
+</div>
+</body>
+</html>

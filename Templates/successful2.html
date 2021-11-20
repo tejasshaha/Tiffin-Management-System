@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction</title>
+</head>
+<style>
+.div8
+{
+    background-color:#F8F8FF; 
+    border-style: solid;
+    margin-left: 300px;
+    margin-right: 300px;
+   }
+.div9
+{
+    background-color:#F8F8FF;
+} 
+ blink, .blink {
+            animation: blinker 1s linear infinite;
+        }
+
+       @keyframes blinker {  
+            50% { opacity: 0; }
+       }
+a:link, a:visited {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:link:active, a:visited:active {
+    color: gray;
+}
+
+.login1{
+        float: right;
+        padding: 10px 10px;
+        font-size: 15px;
+       background-color: #808080 ;
+       margin-right:16px;
+       
+        color:white; 
+        display:block;
+        
+     }
+
+</style>
+<body>
+<div class="div9">
+<a href="/"><h3 class="login1">Logout</h3></a>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="div8">
+<center>
+<h1 style="color:gray;">
+Hi {{userr.name}}
+</h1>
+<h2 style="color:#9ACD32">
+    <blink>Successully Added to your meal !</blink>
+</h2>
+ 
+
+
+
+<a href="bill2-{{userr.U_name}}">Generate Bill</a>
+    <br>
+    <br>
+    <br>
+
+
+<a href="cancel2-{{userr.U_name}}">Cancel Meal</a>
+
+
+</center>
+<br>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</body>
+</html>

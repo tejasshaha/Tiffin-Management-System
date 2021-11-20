@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #009900
+
+;
+
+  top: 100;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black
+;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background:#ff751a;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+abc {
+position: fixed;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.t{
+	ali
+}
+</style>
+</head>
+<body>
+<form method="POST">
+
+<div >
+<img class="abc" src="pune_tiffin.png " width=150 height=150>
+</div>
+<br>
+<div class="navbar">
+  <a href="#home"><bold>Home</bold></a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+</div>
+<br>
+<br>
+<i><strong><font size="15" color="gray" ><center>Regular Full Tiffin</center></font><strong></i>
+<fieldset>
+<legend>
+<h1  style="color:grey">Contains:</h1>
+
+</legend>
+<ul>
+  <li><h2>3 Rotis</h2></li>
+  <li><h2>2 vegetables</h2></li>
+  <li><h2>Dal Rice</h2></li>
+  <li><h2>Roasted Papad</h2></li>
+  <li><h2>Sweet</h2></li>
+</ul>
+    <h2><center> Price: ₹ 50</center></h2>
+</fieldset>
+<fieldset>
+<legend>
+<h1  style="color:grey">Today's special:</h1>
+</legend>
+<h1 style="background-color:#bfbfbf"><u><center>   	Main course    </center>  </u></h1>
+<table>
+  <tr >
+    <th>ITEM</th>
+
+  </tr>
+   <tr>
+    <td><input type="checkbox" name="bhendi_fry" value="Bhendi_fry">{{user.name[0]}}</td>
+   </tr>
+
+<tr>
+    <td><input type="checkbox" name="palak_paneer" value="Palak_Paneer">{{user.name[1]}} </td>
+
+</tr>
+
+<tr>
+    <td><input type="checkbox" name="turai" value="yes">{{user.name[2]}}</td>
+
+</tr>
+
+<tr>
+    <td><input type="checkbox" name="aloo_lahsuni" value="yes">{{user.name[3]}}</td>
+
+
+<tr>
+    <td><input type="checkbox" name="jain_daal" value="yes">{{user.name[4]}} </td>
+
+</tr>
+
+</tr>
+
+</table>
+</fieldset>
+<fieldset>
+<legend>
+<h1  style="color:grey">Extras</h1>
+</legend>
+<h1 style="background-color:#bfbfbf"><u>   <center>	Rice  </center>    </u></h1>
+<table>
+ <tr >
+    <th>ITEM</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+  </tr>
+   <tr>
+    <td><input type="checkbox" name="fried_rice" value="">Fried Rice</td>
+    <td>₹ 50.00</td>
+   <td >
+<select name="type">
+  <option value=0 >0</option>
+  <option value=1 >1</option>
+  <option value=2 >2</option>
+  <option value=3 >3</option>
+  <option value=4 >4</option>
+  <option value=5 >5</option>
+</select>
+</td>
+  </tr>
+
+
+<tr>
+    <td><input type="checkbox" name="jira_rice" value="">Jira Rice </td>
+    <td>₹ 50.00</td>
+   <td >
+<select name="type1">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+
+
+
+</select>
+</td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="paneer_pulav" value="">Paneer Pulav </td>
+    <td>₹ 50.00</td>
+   <td >
+<select name="type2">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+
+
+
+</select>
+</td>
+  </tr>
+</table>
+<h1 style="background-color:#bfbfbf"><u>  <center> 	Sweets </center>     </u></h1>
+  <table>
+ <tr >
+    <th>ITEM</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+  </tr>
+
+  <tr>
+    <td><input type="checkbox" name="gulab_jamun" value="">Gulab Jamun </td>
+    <td>₹ 20.00</td>
+   <td >
+<select name="type3">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select>
+</td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="shrikhand" value="">Shrikhand </td>
+    <td>₹ 20.00</td>
+   <td >
+<select name="type4">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select>
+</td>
+  </tr>
+</table>
+<h1 style="background-color:#bfbfbf"><u> <center>  	Rotis </center>     </u></h1>
+  <table>
+ <tr >
+    <th>ITEM</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="plain_roti" value="">Plain Roti </td>
+    <td>₹ 6.00</td>
+   <td >
+<select name="type5">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select>
+</td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="phulka" value="">Phulka </td>
+    <td>₹ 5.00</td>
+   <td >
+<select name="type6">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select>
+</td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="multigrain_roti" value="">Multigrain Roti </td>
+    <td>₹ 15.00</td>
+   <td >
+<select name="type7">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select>
+</td>
+  </tr>
+
+
+</table>
+<h1 style="background-color:#bfbfbf"><u>  <center> 	ACCOMPANIMENTS </center>    </u></h1>
+  <table>
+ <tr >
+    <th>ITEM</th>
+    <th>PRICE</th>
+    <th>QUANTITY</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="masala_chaas" value="">Masala Chaas </td>
+    <td>₹ 25.00</td>
+   <td >
+<select name="type8">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select>
+</td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="curd" value="">Curd </td>
+    <td>₹ 20.00</td>
+   <td >
+<select name="type9">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select>
+</td>
+  </tr>
+<tr>
+    <td><input type="checkbox" name="salad" value="">Salad </td>
+    <td>₹ 5.00</td>
+   <td >
+<select name="type10">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select>
+</td>
+  </tr>
+
+<tr>
+    <td><input type="checkbox" name="roasted_papad" value="">Roasted Papad </td>
+    <td>₹ 5.00</td>
+   <td >
+<select name="type11">
+  <option value=0>0</option>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select>
+</td>
+  </tr>
+
+
+</table>
+</fieldset>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
